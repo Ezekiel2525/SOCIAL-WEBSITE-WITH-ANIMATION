@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/logo.png" alt="">
+            <ul id="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+            <div class="log">
+                <a href="account.html" class="lg-btn">Login</a>
+                <a href="" class="btn">Download App</a>
+            </div>
+            <img src="img/menu.png" class="menu-icon" onclick="togglemenu()">
+        </nav>
+
+        <main>
+            <div class="header-content">
+                <h1><span>MAKE</span><br><span>NEW FRIENDS</span></h1>
+                <div class="parat">
+                    <p class="anim">Social is a new social media platform to make new friends online in the world. Now lets explore all its amazing features</p>
+                    <a href="" class="btn anim">Join Now</a>
+                </div>
+            </div>
+        </main>
+        <img src="img/pic.png" class="fimg anim">
+    </header>
+    
+
+
+    <script>
+        let menulinks = document.getElementById("menu-links");
+
+        function togglemenu(){
+            menulinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

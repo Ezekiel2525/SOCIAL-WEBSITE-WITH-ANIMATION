@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Website - Account</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/logo.png" alt="">
+            <ul id="menu-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+
+            <div class="log">
+                <a href="account.html" class="lg-btn">Login</a>
+                <a href="" class="btn">Download App</a>
+            </div>
+            <img src="img/menu.png" class="menu-icon" onclick="togglemenu()">
+        </nav>
+
+        <div class="container">
+            <div class="header-content">
+                <img src="img/pic.png" class="girl-img anim">
+                <div class="form-container anim">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="register()">Register</span>
+                        <hr id="Indicator">
+                    </div>
+    
+                    <form id="Loginform">
+                        <input type="text" placeholder="Username">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btnn">Login</button>
+                        <a href="">Forgot Password?</a>
+                    </form>
+    
+                    <form id="Regform">
+                        <input type="text" placeholder="Username">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Password">
+                        <button type="submit" class="btnn">Register</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+       
+    </header>
+    
+
+
+    <script>
+        let menulinks = document.getElementById("menu-links");
+        var LoginForm = document.getElementById("Loginform");
+        var RegForm = document.getElementById("Regform");
+        var Indicator = document.getElementById("Indicator");
+
+        function register() {
+            LoginForm.style.transform = "translateX(0px)";
+            RegForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login() {
+            LoginForm.style.transform = "translateX(300px)";
+            RegForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+
+        function togglemenu(){
+            menulinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
